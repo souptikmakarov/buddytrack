@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.addEventListener("beforeunload", function (e) {
+				do_when_disconnect();
+				(e || window.event).returnValue = null;
+				return null;
+			});
+			function do_when_disconnect(){
+				console.log("Hello")
+			}
+		</script>
+	</body>
+</html>
